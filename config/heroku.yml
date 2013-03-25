@@ -1,0 +1,18 @@
+production:
+  app: waterfall2prod
+  stack: cedar
+  addons: &default_addons
+    - pgbackups:auto-week
+    - scheduler:standard
+    - newrelic:standard
+  config: &default_config
+    BUNDLE_WITHOUT: "development:test"
+#    GOOGLE_ANALYTICS: "UA-12345678-1"
+#  tag: production/*
+
+
+staging:
+  app: waterfall2dev
+  stack: cedar
+  config: *default_config
+  addons: *default_addons

@@ -1,0 +1,18 @@
+---
+base: &base
+  adapter:  postgresql
+  username: waterfall
+  password: blueh20
+  host:     localhost
+
+development: 
+  <<: *base
+  database: waterfall2_dev
+
+production:
+  <<: *base
+  database: waterfall2_production
+
+test: &test
+  <<: *base
+  database: waterfall2_test

@@ -1,0 +1,9 @@
+if [ -f "$rvm_path/scripts/rvm" ] && [ -f ".rvmrc" ]; then
+  source "$rvm_path/scripts/rvm"
+  source ".rvmrc"
+fi
+
+# configs that can be checked into version control
+#  for configs (passwords) that cannot be checked use a local .powenv file to store those
+
+# export PASSWORD="super secret"
