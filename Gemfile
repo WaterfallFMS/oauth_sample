@@ -12,6 +12,8 @@ gem 'haml'
 
 gem 'draper' # to decorate tenants
 
+gem 'omniauth-twitter'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
