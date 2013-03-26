@@ -42,12 +42,12 @@ link:files/vendor/rails/actionpack/README.html.
 == Getting Started
 
 1. At the command prompt, clone Waterfall 2
-       <tt>git clone waterfall2</tt> (where <tt>waterfall2</tt> is the git repo URL)
+       <tt>git clone oauth_sample</tt> (where <tt>waterfall2</tt> is the git repo URL)
 
-2. Change directory to <tt>waterfall2</tt> and start the web server:
-       <tt>cd waterfall2; rails server</tt> (run with --help for options)
+2. Change directory to <tt>oauth_sample</tt> and start the web server:
+       <tt>cd oauth_sample; rails server</tt> (run with --help for options)
 
-3. Go to http://localhost:3000/ and you'll see waterfall2
+3. Go to http://localhost:3000/ and you'll see oauth_sample
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
 * Ruby on Rails Tutorial Book: http://www.railstutorial.org/
@@ -57,8 +57,8 @@ link:files/vendor/rails/actionpack/README.html.
 
 1. Follow the above "Getting Started" section
 
-2. Link waterfall2 so pow will serve it
-      <tt>cd ~/.pow; ln -s waterfall2</tt> (where <tt>waterfall2</tt> is the path to your waterfall2 install)
+2. Link oauth_sample so pow will serve it
+      <tt>cd ~/.pow; ln -s oauth_sample</tt> (where <tt>oauth_sample</tt> is the path to your oauth_sample install)
 
 3. Start guard to monitor your coding
       <tt>guard -i</tt>

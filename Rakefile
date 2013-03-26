@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Waterfall2::Application.load_tasks
+OAuthSample::Application.load_tasks

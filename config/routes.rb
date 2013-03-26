@@ -1,4 +1,4 @@
-Waterfall2::Application.routes.draw do
+OAuthSample::Application.routes.draw do
   devise_for :admin_users
 
   mount RailsAdmin::Engine => '/waterfall_admin', :as => 'rails_admin'
