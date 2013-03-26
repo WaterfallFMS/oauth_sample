@@ -5,6 +5,7 @@ RailsAdmin.config do |config|
 
 
   ################  Global configuration  ################
+  config.authorize_with :cancan, AdminUserAbility
 
   # Set the admin name here (optional second array element will appear in red). For example:
   config.main_app_name = ['Waterfall', 'Super Admin']
