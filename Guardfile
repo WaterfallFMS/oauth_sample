@@ -20,6 +20,7 @@ guard 'pow' do
   watch('config/environment.rb')
   watch(%r{^config/environments/.*\.rb$})
   watch(%r{^config/initializers/.*\.rb$})
+  watch('app/models/admin_user_ability.rb') # because Rails Admin doesn't reload it
 end
 
 guard 'bundler' do
