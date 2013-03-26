@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20130326134825) do
     t.integer  "tenant_id",  :null => false
     t.string   "provider"
     t.string   "uid"
+    t.text     "details"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
