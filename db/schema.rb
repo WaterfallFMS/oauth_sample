@@ -54,10 +54,14 @@ ActiveRecord::Schema.define(:version => 20130326134825) do
 
   create_table "users", :force => true do |t|
     t.string   "name",       :null => false
-    t.string   "email",      :null => false
-    t.string   "type",       :null => false
+    t.string   "email"
+    t.integer  "tenant_id",  :null => false
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "users", ["tenant_id", "provider", "uid"], :name => "index_users_on_tenant_id_and_provider_and_uid", :unique => true
 
 end
