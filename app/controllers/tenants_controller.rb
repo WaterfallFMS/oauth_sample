@@ -4,7 +4,6 @@ class TenantsController < ApplicationController
   end
 
   def show
-    @tenant = Tenant.find params[:id]
-    @tenant = @tenant.becomes(@tenant.type.constantize).decorate
+    redirect_to tenant_landing_path(params[:id])
   end
 end

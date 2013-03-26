@@ -1,0 +1,9 @@
+%h1= current_tenant.name
+
+- if current_user
+  %p= decorated_user.welcome
+  %p= decorated_user.signout_link
+- else
+  %p= current_tenant.signin_link
+
+%p= current_tenant.inspect

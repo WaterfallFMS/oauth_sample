@@ -3,7 +3,9 @@ OAuthSample::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/waterfall_admin', :as => 'rails_admin'
 
-  resources :tenants, :only => [:index, :show]
+  resources :tenants, :only => [:index, :show] do
+    match 'landing' => 'tenant/application#index'
+  end
 
   root :to => 'tenants#index'
 

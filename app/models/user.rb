@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :type
+  default_scope {where(:tenant_id => Tenant.current_id)}
 
-  has_many :tenants, :foreign_key => :owner_id
+  attr_accessible :email, :name
+
+  belongs_to :tenant
 
   validates :name, :presence => true
-  validates :email, :presence => true
 end
