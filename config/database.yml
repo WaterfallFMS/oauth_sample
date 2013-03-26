@@ -7,12 +7,12 @@ base: &base
 
 development: 
   <<: *base
-  database: waterfall2_dev
+  database: oauth_dev
 
 production:
   <<: *base
-  database: waterfall2_production
+  database: oauth_production
 
 test: &test
   <<: *base
-  database: waterfall2_test
+  database: oauth_test

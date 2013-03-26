@@ -1,5 +1,5 @@
 production:
-  app: waterfall2prod
+  app: waterfall-oauth-test
   stack: cedar
   addons: &default_addons
     - pgbackups:auto-week
@@ -12,7 +12,7 @@ production:
 
 
 staging:
-  app: waterfall2dev
+  app: waterfall-oauth-test
   stack: cedar
   config: *default_config
   addons: *default_addons
