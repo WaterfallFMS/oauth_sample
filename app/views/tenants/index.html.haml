@@ -1,0 +1,4 @@
+%ul
+  %li= link_to 'Admin', rails_admin_path
+  - @tenants.each do |tenant|
+    %li= link_to tenant.name, tenant_path(tenant)
