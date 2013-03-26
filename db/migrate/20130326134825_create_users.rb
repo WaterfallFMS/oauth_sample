@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       # OAuth
       t.string :provider
       t.string :uid
+      t.text   :details
 
       t.timestamps
     end
