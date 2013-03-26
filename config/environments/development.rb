@@ -35,18 +35,18 @@ OAuthSample::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  config.middleware.use ExceptionNotifier,
-    sender_address: 'donoreply@waterfallfms.com',
-    exception_recipients: 'it@waterfallfms.com',
-    smtp_settings: {
-      address:              "smtp.gmail.com",
-      port:                 587,
-      domain:               'waterfallfms.com',
-      user_name:            (ENV['EXCEPTION_USER'] rescue ''),
-      password:             (ENV['EXCEPTION_PASSWORD'] rescue ''),
-      authentication:       'plain',
-      enable_starttls_auto: true
-    }
+  #config.middleware.use ExceptionNotifier,
+  #  sender_address: 'donoreply@waterfallfms.com',
+  #  exception_recipients: 'it@waterfallfms.com',
+  #  smtp_settings: {
+  #    address:              "smtp.gmail.com",
+  #    port:                 587,
+  #    domain:               'waterfallfms.com',
+  #    user_name:            (ENV['EXCEPTION_USER'] rescue ''),
+  #    password:             (ENV['EXCEPTION_PASSWORD'] rescue ''),
+  #    authentication:       'plain',
+  #    enable_starttls_auto: true
+  #  }
 
   config.action_mailer.delivery_method = :letter_opener
 
