@@ -6,7 +6,11 @@ gem 'jquery-rails'
 gem 'bundler', '1.3.0.pre.5' # to match heroku
 
 gem 'rails_admin'
+gem 'cancan'
 gem 'exception_notification'
+gem 'haml'
+
+gem 'draper' # to decorate tenants
 
 
 # Gems used only for assets and not required

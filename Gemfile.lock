@@ -47,6 +47,7 @@ GEM
     builder (3.0.4)
     bullet (4.3.1)
       uniform_notifier
+    cancan (1.6.9)
     capybara (2.0.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -70,6 +71,10 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.2.1)
+    draper (1.1.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
@@ -217,6 +222,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     remotipart (1.0.5)
+    request_store (1.0.5)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -286,9 +292,11 @@ PLATFORMS
 DEPENDENCIES
   bullet
   bundler (= 1.3.0.pre.5)
+  cancan
   capybara
   coffee-rails (~> 3.2.1)
   devise
+  draper
   exception_notification
   factory_girl_rails
   fakeweb
@@ -299,6 +307,7 @@ DEPENDENCIES
   guard-pow
   guard-rspec
   guard-spork
+  haml
   heroku_san
   jquery-rails
   letter_opener
