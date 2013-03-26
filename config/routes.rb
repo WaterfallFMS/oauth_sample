@@ -3,6 +3,10 @@ OAuthSample::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/waterfall_admin', :as => 'rails_admin'
 
+  resources :tenants, :only => [:index, :show]
+
+  root :to => 'tenants#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
