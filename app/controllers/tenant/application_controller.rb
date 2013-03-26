@@ -19,13 +19,13 @@ private
   end
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find(session[:user_id]).decorate if session[:user_id]
+  rescue
+    nil
   end
   helper_method :current_user
 
-  def decorated_user
-    return unless current_user
-    current_user.decorate
+  def tenant_root_path
+    tenant_path current_tenant
   end
-  helper_method :decorated_user
 end

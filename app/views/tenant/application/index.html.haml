@@ -1,8 +1,13 @@
 %h1= current_tenant.name
 
 - if current_user
-  %p= decorated_user.welcome
-  %p= decorated_user.signout_link
+  %p= current_user.welcome
+  %p= current_tenant.signout_link
+
+  %h1= current_user.provider
+
+  = raw current_user.provider_details
+
 - else
   %p= current_tenant.signin_link
 

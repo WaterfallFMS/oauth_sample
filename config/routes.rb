@@ -3,6 +3,10 @@ OAuthSample::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/waterfall_admin', :as => 'rails_admin'
 
+  match 'auth/:provider/callback', to: 'tenant/sessions#create'
+  match 'auth/failure',            to: 'tenant/sessions#failure'
+  match 'signout',                 to: 'tenant/sessions#destroy', as: 'signout'
+
   resources :tenants, :only => [:index, :show] do
     match 'landing' => 'tenant/application#index'
   end
