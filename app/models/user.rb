@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  default_scope {where(:tenant_id => Tenant.current_id)}
+  default_scope {Tenant.current_id != :admin ? where(:tenant_id => Tenant.current_id) : nil}
   serialize :details
 
   attr_accessible :email, :name

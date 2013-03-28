@@ -1,5 +1,4 @@
 class Tenant::ApplicationController < ApplicationController
-  around_filter :scope_current_tenant
 
   def index
   end
