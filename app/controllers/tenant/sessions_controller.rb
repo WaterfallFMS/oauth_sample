@@ -1,7 +1,7 @@
 class Tenant::SessionsController < Tenant::ApplicationController
   def create
     user = User.from_omniauth(env["omniauth.auth"])
-    session[:user_id] = user.id
+    self.session_user = user
     redirect_to tenant_root_path, notice: 'Signed in!'
   end
 
@@ -9,7 +9,14 @@ class Tenant::SessionsController < Tenant::ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    self.session_user = nil
     redirect_to root_path, notice: "Signed out!"
+  end
+private
+  def session_user=(user)
+    session[:tenants] ||= {}
+    session[:tenants][Tenant.current_id] ||= {}
+    session[:tenants][Tenant.current_id][:user_id] = nil
+    session[:tenants][Tenant.current_id][:user_id] = user.id unless user.nil?
   end
 end

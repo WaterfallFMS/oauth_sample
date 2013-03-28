@@ -18,8 +18,12 @@ private
   end
 
   def current_user
-    @current_user ||= User.find(session[:user_id]).decorate if session[:user_id]
-  rescue
+    return unless session[:tenants] && session[:tenants][Tenant.current_id]
+    @current_user ||= User.find(session[:tenants][Tenant.current_id][:user_id]).decorate
+  rescue => e
+    logger.info 'Excpetion was raised'
+    logger.info e.inspect
+    logger.info e.backtrace.join "\n"
     nil
   end
   helper_method :current_user
