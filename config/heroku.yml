@@ -9,10 +9,3 @@ production:
     BUNDLE_WITHOUT: "development:test"
 #    GOOGLE_ANALYTICS: "UA-12345678-1"
 #  tag: production/*
-
-
-staging:
-  app: waterfall-oauth-test
-  stack: cedar
-  config: *default_config
-  addons: *default_addons
