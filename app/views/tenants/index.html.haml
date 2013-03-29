@@ -1,4 +1,5 @@
 %ul
-  %li= link_to 'Admin', rails_admin_path
+  %li= link_to 'Source Code', 'https://github.com/WaterfallFMS/oauth_sample', :target => :blank
+  %li= link_to 'Admin', rails_admin_path, :target => :blank
   - @tenants.each do |tenant|
     %li= link_to tenant.name, tenant_path(tenant)
